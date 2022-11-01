@@ -1,6 +1,4 @@
-FROM python:3
-RUN  mkdir nginx
-RUN  cd  /etc/nginx/conf.d/*
-WORKDIR  /nginx
-ADD hello_world.py /etc/nginx/conf.d/
-CMD ["python", "-u", "hello_world.py"]
+FROM nginx:mainline-alpine
+RUN rm /etc/nginx/conf.d/*
+ADD helloworld.conf /etc/nginx/conf.d/
+ADD index.html /usr/share/nginx/html/
