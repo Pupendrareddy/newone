@@ -1,8 +1,7 @@
-from flask import Flask
+from time import sleep
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello():
-    return '<h1>Hello, World!</h1>'
+# the program will print hello world
+#  every 1 second foever
+while True:
+    print("Hello, World")
+    sleep(1)
