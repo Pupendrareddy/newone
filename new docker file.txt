@@ -3,4 +3,4 @@ RUN  mkdir nginx
 RUN  cd  /etc/nginx/conf.d/*
 WORKDIR  /nginx
 ADD hello_world.py /etc/nginx/conf.d/
-CMD ["python", "-u", "hello_world.py"]
+CMD ["nginx", "-u", "hello_world.py"]
